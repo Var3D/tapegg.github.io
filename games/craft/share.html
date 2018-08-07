@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<button class="btn" id="btn" data-clipboard-text="copyValue" onclick="change()">点我复制</button>
+<button class="btn" id="btn" data-clipboard-text="copyValue" type="hidden">点我复制</button>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
 <script>
 function getQueryString(name) { 
@@ -14,10 +14,10 @@ function getQueryString(name) {
   var r = window.location.search.substr(1).match(reg); 
   if (r != null) return unescape(r[2]); return null; 
 } 
-function change(){
+//function change(){
 	var id=getQueryString('id');
     document.getElementById("btn").setAttribute('data-clipboard-text',id);
-}
+//}
 </script>
 
 <script>
