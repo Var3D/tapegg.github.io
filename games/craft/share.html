@@ -6,19 +6,22 @@
 </head>
 
 <body>
+<button id="btn">点我复制</button>
+
 <script> 
-function copy(){
+const btn = document.querySelector('#btn');
+btn.addEventListener('click',function() {
 	const input = document.createElement('input');
-	document.body.appendChild(input);
- 	input.setAttribute('value', '听说你想复制我123');
-	input.select();
+    input.setAttribute('readonly', 'readonly');
+    input.setAttribute('value', '快来快乐复制我压');
+    document.body.appendChild(input);
+	input.setSelectionRange(0, 9999);
 	if (document.execCommand('copy')) {
 		document.execCommand('copy');
 		console.log('复制成功');
 	}
     document.body.removeChild(input);
-}
-copy();
+})
 </script>
 </body>
 </html>
