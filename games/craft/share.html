@@ -8,10 +8,21 @@ body {
     text-align: center;
     background-color: #444444;
 }
+.article {
+    width: 400px;
+    text-align: center;
+    margin:0px auto 40px;
+    padding: 1px 1px 1px 1px;
+    border-width: 1px 1px 1px 1px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    background-color: white;
+}
 </style>
 </head>
 
 <body>
+<div class="article">
 <img src="icon.jpg" style="width:395px;height:222px;"/><br><br>
 
 <button class="btn" id="btn" data-clipboard-text="copyValue" onclick="change()" 
@@ -31,10 +42,9 @@ function change(){
 </script>
 
 <script>
-document.getElementById("btn").click();
 var copyBtn = new ClipboardJS('.btn');
 </script>
-
+</div>
 </body>
 </html>
 
