@@ -6,10 +6,9 @@
 </head>
 
 <body>
-<button id="btn">点我复制</button>
+读取中,请稍等...
 <script> 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click',function(){
+function copy(){
 	const input = document.createElement('input');
 	document.body.appendChild(input);
  	input.setAttribute('value', '听说你想复制我');
@@ -19,7 +18,8 @@ btn.addEventListener('click',function(){
 		console.log('复制成功');
 	}
     document.body.removeChild(input);
-})
+}
+copy();
 </script>
 </body>
 </html>
