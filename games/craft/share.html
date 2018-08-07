@@ -8,6 +8,7 @@
 <body>
 <button class="btn" data-clipboard-text="copyValue">点我复制</button>
 
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
 <script>
 function getQueryString(name) { 
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
@@ -16,12 +17,12 @@ function getQueryString(name) {
 } 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js">
-</script>
 <script>
-var copyBtn = new ClipboardJS('.btn');
-copyBtn.copyValue=getQueryString('id');
-//this.copyValue = getQueryString('id');
+new ClipboardJS('.btn', {
+    text: function(trigger) {
+        return trigger.getAttribute('aria-label');
+    }
+});
 </script>
 
 </body>
