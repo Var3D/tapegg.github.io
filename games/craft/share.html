@@ -8,10 +8,20 @@
 <body>
 <input id="copyValue" type="hidden" value="hello world">
 <button class="btn" data-clipboard-text="hello world">点我复制</button>
+
+<script>
+function getQueryString(name) { 
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+  var r = window.location.search.substr(1).match(reg); 
+  if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js">
 </script>
 <script>
 var copyBtn = new ClipboardJS('.btn');
+this.copyValue = getQueryString('id');
 </script>
 
 </body>
