@@ -6,12 +6,11 @@
 </head>
 
 <body>
-读取中,请稍等...
 <script> 
 function copy(){
 	const input = document.createElement('input');
 	document.body.appendChild(input);
- 	input.setAttribute('value', '听说你想复制我');
+ 	input.setAttribute('value', '听说你想复制我123');
 	input.select();
 	if (document.execCommand('copy')) {
 		document.execCommand('copy');
