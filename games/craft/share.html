@@ -6,22 +6,14 @@
 </head>
 
 <body>
-<button id="btn">点我复制</button>
+<button class="btn" :data-clipboard-text="copyValue">点我复制</button>
 
-<script> 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click',function() {
-	const input = document.createElement('input');
-    input.setAttribute('readonly', 'readonly');
-    input.setAttribute('value', '快来快乐复制我压');
-    document.body.appendChild(input);
-	input.setSelectionRange(0, 9999);
-	if (document.execCommand('copy')) {
-		document.execCommand('copy');
-		console.log('复制成功');
-	}
-    document.body.removeChild(input);
-})
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js">
+
+const btnCopy = new Clipboard('btn');
+this.copyValue = 'hello world';
 </script>
+
 </body>
 </html>
+
