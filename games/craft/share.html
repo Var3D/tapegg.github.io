@@ -15,13 +15,14 @@ function getQueryString(name) {
   if (r != null) return unescape(r[2]); return null; 
 } 
 //function change(){
-	var id=getQueryString('id');
-    document.getElementById("btn").setAttribute('data-clipboard-text',id);
+	
 //}
 </script>
 
 <script>
 var copyBtn = new ClipboardJS('.btn');
+var id=getQueryString('id');
+document.getElementById("btn").setAttribute('data-clipboard-text',id);
 </script>
 
 </body>
