@@ -37,10 +37,10 @@ function gotoUrl() {
         window.setTimeout(function() {
           var timeOutDateTime = new Date();
           if (timeOutDateTime - loadDateTime < 5000) {
-            window.location = "https://itunes.apple.com/cn/app/id1144041654";
+            window.location = "https://itunes.apple.com/app/id"+getQueryString("id");
           } else {window.close();}
         },25);
-       window.location = "app://tapegg.craft";
+       window.location = "app://tapegg.craft?"+location.search;
       };
      ios();
 </script>
