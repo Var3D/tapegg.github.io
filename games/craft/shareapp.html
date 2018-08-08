@@ -42,10 +42,12 @@ function gotoUrl() {
               isInstalled = true;
               alert(isInstalled);
                document.getElementById('btn').click();
+			   document.location.href = ifrSrc;
 			  };
          ifr.onerror = function() {
               isInstalled = false;
               alert(isInstalled);
+			  document.location.href = 'https://itunes.apple.com/cn/app/id1144041654';
          }
          document.body.appendChild(ifr);
          setTimeout(function() {document.body.removeChild(ifr);},1000);
