@@ -26,19 +26,22 @@ function getQueryString(name) {
   var r = window.location.search.substr(1).match(reg); 
   if (r != null) return unescape(r[2]); return null; 
 } 
+function gotoUrl() { 
+  document.location.href = 'app://tapegg.craft';
+} 
 </script>
-
+<button class="btn" id="btn" onclick="gotoUrl()" style="width:90%;height:79px;font-size:30px;">进入我设计的世界</button>
 <script>
-     var isInstalled;
+         var isInstalled;
          //下面是IOS调用的地址，自己根据情况去修改
-         var ifrSrc = 'app://tapegg.craft?id='+getQueryString("id");
+         var ifrSrc = 'app://tapegg.craft';
 		 var ifr = document.createElement('iframe');
          ifr.src = ifrSrc;
          ifr.style.display = 'none';
          ifr.onload = function() {
               isInstalled = true;
               alert(isInstalled);
-              document.getElementById('openApp1').click();
+               document.getElementById('btn').click();
 			  };
          ifr.onerror = function() {
               isInstalled = false;
