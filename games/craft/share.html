@@ -21,10 +21,11 @@ body {
 
 <body>
 <div class="article">
-<img src="http://bmob-cdn-444.b0.upaiyun.com/2018/08/07/edad14b4401bd69780263661fdb03c56.jpg" style="width:90%;height:auto;"/><br>
-
+<img src="http://bmob-cdn-444.b0.upaiyun.com/2018/08/07/edad14b4401bd69780263661fdb03c56.jpg" style="width:100%;height:auto;position:absolute;"/>
+<img src="http://qr.topscan.com/api.php?text=" id="ewm" style="width:120px;height:120px;position:absolute;left:40px;top:30px;"/>
+<font size="3" color="#FFFFFF" style="position:absolute;left:25px;top:160px">请用手机扫一扫访问!</font>
 <button class="btn" id="btn" data-clipboard-text="copyValue" onclick="change()" 
-style="width:90%;height:79px;font-size:30px;">进入我创造的世界</button>
+style="width:300px;height:80px;font-size:30px;position:absolute;left:50%;margin-left:-150px;top:300px;">进入我创造的世界</button>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
 <script>
@@ -59,6 +60,9 @@ function change(){
 
 <script>
 var copyBtn = new ClipboardJS('.btn');
+var path=location.search;
+path=path.replace(/&/g, "%26");
+ document.getElementById("ewm").setAttribute('src',"http://qr.topscan.com/api.php?text=www.tapegg.com/games/craft/share.html"+path);
 </script>
 <div style="text-align: center;">
 </body>
