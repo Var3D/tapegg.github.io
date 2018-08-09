@@ -60,10 +60,13 @@ function change(){
 
 <script>
 var copyBtn = new ClipboardJS('.btn');
-if(document.documentElement.clientWidth > document.body.clientWidth){
-	document.getElementById("bg").setAttribute('src',"http://bmob-cdn-444.b0.upaiyun.com/2018/08/09/d87e37cc4017b50c80bd160f70e5fc72.jpg");
+var bgimg=document.getElementById("bg");
+if(document.documentElement.clientWidth > document.documentElement.clientHeight ){
+	bgimg.setAttribute('src',"http://bmob-cdn-444.b0.upaiyun.com/2018/08/09/d87e37cc4017b50c80bd160f70e5fc72.jpg");
+	bgimg.setAttribute('style',"width:100%;height:auto;position:absolute;");
 	}else{
-		document.getElementById("bg").setAttribute('src',"http://bmob-cdn-444.b0.upaiyun.com/2018/08/07/edad14b4401bd69780263661fdb03c56.jpg");
+		bgimg.setAttribute('src',"http://bmob-cdn-444.b0.upaiyun.com/2018/08/07/edad14b4401bd69780263661fdb03c56.jpg");
+		bgimg.setAttribute('style',"width:100%;height:auto;position:absolute;");
 		}
 var path=location.search;
 path=path.replace(/&/g, "%26");
