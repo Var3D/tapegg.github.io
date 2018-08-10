@@ -42,14 +42,14 @@ function ios(){
           var timeOutDateTime = new Date();
           if (timeOutDateTime - loadDateTime < 5000) {
 			  if(window.confirm('需要安装<<虚幻世界>>才能看到对方创造的世界，现在去AppStore下载吗？')){
-                 window.location = "https://itunes.apple.com/cn/app/id"+getQueryString("id");
+                 window.location.href = "https://itunes.apple.com/cn/app/id"+getQueryString("id");
                  return true;
               }else{
                  return false;
              }
           } else {window.close();}
         },25);
-       window.location = "app://tapegg.craft"+location.search;
+       window.location.href = "app://tapegg.craft"+location.search;
 };
 
 function change(){
