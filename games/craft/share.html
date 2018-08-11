@@ -23,7 +23,7 @@ body {
 <img id="bg" src="https://bmob-cdn-444.b0.upaiyun.com/2018/08/09/d87e37cc4017b50c80bd160f70e5fc72.jpg" style="width:100%;height:auto;position:absolute;;left:0px;top:0px;"/>
 
 <div id="erweima"></div>
-<font size="3" color="#000000" style="position:absolute;left:25px;top:160px">请用手机扫一扫访问!</font>
+<font id="erweimafont" size="3" color="#000000" style="position:absolute;left:25px;top:160px">请用手机扫一扫访问!</font>
 <font size="6" color="#ffffff" style="position:absolute;width:50%;left:50%;margin-left:-25%;top:30%;text-shadow:2px 2px 5px #333333;">你的朋友建设了一个独立无二的世界，邀请你去他的世界逛逛。</font>
 <button class="btn" id="btn" data-clipboard-text="copyValue" onclick="change()" 
 style="background:url(https://bmob-cdn-444.b0.upaiyun.com/2018/08/09/63c0ad1e40e7d9a6800447e49e29ca95.jpg) no-repeat;border:none;background-size: 100% 100%;width:400px;height:80px;font-size:30px;color:white;position:absolute;left:50%;margin-left:-200px;top:60%;margin-top:-40px;">进入世界</button>
@@ -82,14 +82,15 @@ if(document.documentElement.clientWidth > document.documentElement.clientHeight 
 	}
 var path=location.search;
 path=path.replace(/&/g, "%26");
-if (browser.versions.mobile) {
-	
-	}else{
+if (browser.versions.mobile==false) {
 		var cc=new Image();
-cc.src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://www.tapegg.com/games/craft/share.html"+path;
-cc.setAttribute("style","width:120px;height:120px;position:absolute;left:40px;top:30px;");
-document.getElementById("erweima").appendChild(cc);
-		}
+        cc.src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://www.tapegg.com/games/craft/share.html"+path;
+        cc.setAttribute("style","width:120px;height:120px;position:absolute;left:40px;top:30px;");
+        document.getElementById("erweima").appendChild(cc);
+		}else{
+			document.getElementById("erweimafont").style.visibility="hidden";
+			
+			}
 </script>
 </body>
 </html>
