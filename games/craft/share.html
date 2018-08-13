@@ -70,7 +70,7 @@ var browser = {
             } (),
             language: (navigator.browserLanguage || navigator.language).toLowerCase()
         }
-
+var language = (navigator.language || navigator.browserLanguage).toLowerCase();
 </script>
 
 <script>
@@ -87,6 +87,9 @@ if (browser.versions.mobile==false) {
         cc.src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://www.tapegg.com/games/craft/share.html"+path;
         cc.setAttribute("style","width:120px;height:120px;position:absolute;left:40px;top:30px;");
         document.getElementById("erweima").appendChild(cc);
+		if (language.indexOf('zh')<0){
+		document.getElementById("erweimafont").innerText="Please use your mobile phone to scan the QR code for access";
+		}
 		}else{
 			document.getElementById("erweimafont").style.visibility="hidden";
 			document.getElementById("messeg").style.color="black";
