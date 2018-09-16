@@ -148,7 +148,7 @@ body {
  <div class="article-name">
    <p><font key="name">《贪玩蛇战方块》</font></p>
  </div>
-  <div class="article-image"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img key="img" lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
+  <div class="article-image"><a key="iosid" href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img key="img" lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
 <div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
 </div>
 
@@ -183,10 +183,12 @@ body {
                      var cpy=ite.clone();
                      cpy.find("[key]").each(function(){
                          var that=$(this);
-						 if(that.tagName=="IMG"){
-							 that.attr("lazy-src",ks[i][1]);
+						 if(that[0].tagName=="A"){
+							 that.attr("href","https://itunes.apple.com/cn/app/id"+that.attr("key"));
+					     }else if(that[0].tagName=="IMG"){
+							 that.attr("lazy-src",that.attr("key"));
 							 }else{
-                               that.text(ks[i][0]);
+                               that.text(that.attr("key"));
 							 }
                      })
                      cpy.fadeIn();
