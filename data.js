@@ -16,5 +16,5 @@ var ks=[
   {name:"连连看",name_en:"Pairing Fruit Cake",img:"/games/fruitcake-ad.jpg",iosid:1053041763},
   {name:"堆箱子",name_en:"Stack Box",img:"/games/stack-ad.jpg",iosid:1100589304},
   {name:"消除逗比",name_en:"Bean Boom",img:"/games/beanboom-ad.jpg",iosid:1042030744},
-  {name:"童话爱消除",name_en:"Fairy Tale Tap",img:"/games/fairytap-ad.jpg",iosid:1065759770},
+  {name:"童话爱消除",name_en:"Fairy Tale Tap",img:"/games/fairytap-ad.jpg",iosid:1065759770}
 ];
