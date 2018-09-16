@@ -149,7 +149,8 @@ body {
    <p><font key="name">《贪玩蛇战方块》</font></p>
  </div>
   <div class="article-image"><a key="iosid" href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img key="img" lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
-<div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
+<div class="article-badge"><a key="iosid" href="https://itunes.apple.com/cn/app/id1403252096" target="_blank">
+<img key="down" lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
 </div>
 
  </div>
@@ -171,8 +172,8 @@ body {
 				document.getElementById("viewgame").innerText="Check out all of our amazing games for iPhone and iPad and search for TapEgg in the AppStore search field.";
 				}
 				 var ks=[
-				 {name:"贪玩蛇战方块",img:"/games/snakebrick-ad.png",iosid:1403252096},
-				 {name:"切胖次",img:"/games/catpants-ad.png",iosid:1374746799}
+				 {name:"贪玩蛇战方块",name_en:"Snake Brick",img:"/games/snakebrick-ad.png",iosid:1403252096},
+				 {name:"切胖次",name_en:"Cut Pants",img:"/games/catpants-ad.png",iosid:1374746799}
 				 ];
 				 var tar=$(".target");
                  var ite=$(".article");
@@ -184,11 +185,27 @@ body {
                      cpy.find("[key]").each(function(){
                          var that=$(this);
 						 if(that[0].tagName=="A"){
-							 that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
+							 if(isEnglish==false){
+								   that.attr("href","https://itunes.apple.com/us/app/id"+ks[i][that.attr("key")]);
+								 }else{
+							       that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
+								 }
 					     }else if(that[0].tagName=="IMG"){
-							 that.attr("lazy-src",ks[i][that.attr("key")]);
+							   var key=that.attr("key");
+							   if(key=="down"){
+								   if(isEnglish==false){
+									    that.attr("lazy-src","/var3dfiles/iosdown_en.png");
+									   }
+							   }else{
+								   that.attr("lazy-src",ks[i][key]);
+								   }
 							 }else{
                                that.text(ks[i][that.attr("key")]);
+							   if(isEnglish==false){
+								   that.text(ks[i][that.attr("key")+"_en"]);
+								 }else{
+							       that.text(ks[i][that.attr("key")]);
+								 }
 							 }
                      })
                      cpy.fadeIn();
