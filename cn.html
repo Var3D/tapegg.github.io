@@ -106,9 +106,18 @@ body {
             $(function(){
                  lazyelem.listen();
             });
+			
+			var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+			var isEnglish=language.indexOf('zh')<0;
+			if(isEnglish==false){
+				$(document).attr("title","TapEgg Free iphone Games");
+				document.getElementById("name").innerHTML="TapEgg Studio";
+				document.getElementById("scanit").innerHTML="Sweep and open directly on the phone";
+				document.getElementById("music").innerHTML="Original Song";
+				document.getElementById("privacy").innerHTML="Privacy Policy";
+				}
         </script>
-        
-
+       
     </head>
 
 <body>
@@ -116,9 +125,9 @@ body {
 <div>
   <p><img src="/var3dfiles/logomini.png"/><br>
             <br />
-            <font size="5">点蛋科技</font><br><br>
+            <font size="5" id="name">点蛋科技</font><br><br>
   <img src="/var3dfiles/erweima.png"/></p>
- 扫一扫，直接在手机上打开 
+ <font id="scanit">扫一扫，直接在手机上打开</font>
   
   
   
@@ -139,7 +148,7 @@ body {
 </div>
         <p><a href="http://wpa.qq.com/msgrd?v=3&uin=348705644&site=qq&menu=yes" target="_blank" class="article-text" data-show-count="false" data-size="large">@Tapegg</a></p>
         <div class="fb-like" data-href="https://twitter.com/var3d" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-<p><span class="article-image"><a href="/privacy-policy-zh.html" target="_blank" class="article-text">隐私策略</a>| <a href="http://music.163.com/#/song?id=459968628" target="_blank" class="article-text">原创歌曲</a> |<a href="/en.html" target="_self" class="article-text">English</a></span></p>
+<p><span class="article-image"><a id="privacy" href="/privacy-policy-zh.html" target="_blank" class="article-text">隐私策略</a>| <a id="music" href="http://music.163.com/#/song?id=459968628" target="_blank" class="article-text">原创歌曲</a> |<a href="/en.html" target="_self" class="article-text">English</a></span></p>
 <p><br>
 </p>
 
