@@ -198,44 +198,17 @@ body {
 				 
 				 var items=[];
 				 
-                 for(var i=0;i<ks.length;i++){
-                     var cpy=ite.clone();
-					 items[i]=cpy;
-                     cpy.find("[key]").each(function(){
-                         var that=$(this);
-						 if(that[0].tagName=="A"){
-							 if(isEnglish){
-								   that.attr("href","https://itunes.apple.com/us/app/id"+ks[i][that.attr("key")]);
-								 }else{
-							       that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
-								 }
-					     }else if(that[0].tagName=="IMG"){
-							   var key=that.attr("key");
-							   if(key=="down"){
-								   if(isEnglish){
-									    that.attr("src","/var3dfiles/iosdown_en.png");
-									   }else{
-										   that.attr("src","/var3dfiles/iosdown.png");
-										   }
-							   }else{
-								   that.attr("lazy-src",ks[i][key]);
-								   }
-							 }else{
-                               that.text(ks[i][that.attr("key")]);
-							   if(isEnglish){
-								   that.text(ks[i][that.attr("key")+"_en"]);
-								 }else{
-							       that.text(ks[i][that.attr("key")]);
-								 }
-							 }
-                     })
-                     cpy.fadeIn();
-                     tar.append(cpy);
-        }
+                change2(true);
 		
-		function change2(){
+		function change2(isCreate){
 					 for(var i=0;i<ks.length;i++){
-                     var cpy=items[i];
+						 var cpy;
+					     if(isCreate){
+						     cpy=ite.clone();
+							 items[i]=cpy;
+						 }else{
+							 cpy=items[i];
+							 }	 
                      cpy.find("[key]").each(function(){
                          var that=$(this);
 						 if(that[0].tagName=="A"){
@@ -265,13 +238,16 @@ body {
 							 }
                      })
                      cpy.fadeIn();
-        }
+					 if(isCreate){
+						 tar.append(cpy);
+						 }
+                       }
 					 }
 		
 		function changeLanguage(){
 	       isEnglish=!isEnglish;
 		   change();
-		   change2();
+		   change2(false);
         }
         </script>
         <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_3642451'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D3642451%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
