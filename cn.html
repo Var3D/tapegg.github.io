@@ -148,15 +148,15 @@ body {
  <div class="article-name">
    <p><font key="name">《贪玩蛇战方块》</font></p>
  </div>
-  <div class="article-image"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank" alt="贪玩蛇战方块"><img lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
-<div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank" alt="贪玩蛇战方块"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
+  <div class="article-image"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img key="img" lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
+<div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
 </div>
 
  </div>
         
 <!-- app结束 -->
         <div class="article-text"><span class="copyright">Copyright @ 2010-2018 TapEgg Studio, Inc. All rights reserved.</span><br>
-            <br><a id="viewgame" href="https://itunes.apple.com/cn/developer/id1374746798" target="_blank">查看我们所有的iPhone和iPad的惊人游戏，在AppStore的搜索字段中搜索TapEgg.</a></div>
+        <br><a id="viewgame" href="https://itunes.apple.com/cn/developer/id1374746798" target="_blank">查看我们所有的iPhone和iPad的惊人游戏，在AppStore的搜索字段中搜索TapEgg.</a></div>
 
 <script>
 			var language = (navigator.language || navigator.browserLanguage).toLowerCase();
@@ -170,7 +170,10 @@ body {
 				document.getElementById("privacy").innerText="Privacy Policy";
 				document.getElementById("viewgame").innerText="Check out all of our amazing games for iPhone and iPad and search for TapEgg in the AppStore search field.";
 				}
-				 var ks=[{name:"贪玩蛇战方块",img:"/games/snakebrick-ad.png",iosid:1403252096},{name:"切胖次",img:"/games/catpants-ad.png",iosid:1374746799}];
+				 var ks=[
+				 {name:"贪玩蛇战方块",img:"/games/snakebrick-ad.png",iosid:1403252096},
+				 {name:"切胖次",img:"/games/catpants-ad.png",iosid:1374746799}
+				 ];
 				 var tar=$(".target");
                  var ite=$(".article");
                  ite.remove();
@@ -180,7 +183,11 @@ body {
                      var cpy=ite.clone();
                      cpy.find("[key]").each(function(){
                          var that=$(this);
-                         that.text(ks[i][that.attr("key")]);
+						 if(that.tagName=="IMG"){
+							 that.attr("lazy-src",ks[i][1]);
+							 }else{
+                               that.text(ks[i][0]);
+							 }
                      })
                      cpy.fadeIn();
                      tar.append(cpy);
