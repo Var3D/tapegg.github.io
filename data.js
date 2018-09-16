@@ -12,5 +12,5 @@ var ks=[
   {name:"炫彩坦克大战",name_en:"Color Tank.io",img:"/games/colortank-ad.jpg",iosid:1121228306},
   {name:"扔瓶子",name_en:"Flip Bottle",img:"/games/flipbottle-ad.jpg",iosid:1167550180},
   {name:"消除星星3D",name_en:"Stars3D",img:"/games/stars3d-ad.jpg",iosid:1062625696},
-  {name:"熊猫跑酷",name_en:"Gravity Panda",img:"/games/gravitypanda-ad.jpg",iosid:1119051422},
+  {name:"熊猫跑酷",name_en:"Gravity Panda",img:"/games/gravitypanda-ad.jpg",iosid:1119051422}
 ];
