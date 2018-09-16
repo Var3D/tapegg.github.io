@@ -162,7 +162,7 @@ body {
 <script>
 			var language = (navigator.language || navigator.browserLanguage).toLowerCase();
 			var isEnglish=language.indexOf('zh')<0;
-			if(isEnglish==false){
+			if(isEnglish){
 				$(document).attr("title","TapEgg Free iphone Games");
 				document.getElementById("name").innerText="TapEgg Studio";
 				document.getElementById("scanit").innerText="Sweep and open directly on the phone";
@@ -185,7 +185,7 @@ body {
                      cpy.find("[key]").each(function(){
                          var that=$(this);
 						 if(that[0].tagName=="A"){
-							 if(isEnglish==false){
+							 if(isEnglish){
 								   that.attr("href","https://itunes.apple.com/us/app/id"+ks[i][that.attr("key")]);
 								 }else{
 							       that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
@@ -193,7 +193,7 @@ body {
 					     }else if(that[0].tagName=="IMG"){
 							   var key=that.attr("key");
 							   if(key=="down"){
-								   if(isEnglish==false){
+								   if(isEnglish){
 									    that.attr("lazy-src","/var3dfiles/iosdown_en.png");
 									   }
 							   }else{
@@ -201,7 +201,7 @@ body {
 								   }
 							 }else{
                                that.text(ks[i][that.attr("key")]);
-							   if(isEnglish==false){
+							   if(isEnglish){
 								   that.text(ks[i][that.attr("key")+"_en"]);
 								 }else{
 							       that.text(ks[i][that.attr("key")]);
