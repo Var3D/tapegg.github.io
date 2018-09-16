@@ -142,25 +142,17 @@ body {
 <p><br>
 </p>
 
+<div class="target">
   
 <div class="article">
  <div class="article-name">
-   <p>《贪玩蛇战方块》 </p>
+   <p><font key="name">《贪玩蛇战方块》</font></p>
  </div>
   <div class="article-image"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank" alt="贪玩蛇战方块"><img lazy-src="/games/snakebrick-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
 <div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1403252096" target="_blank" alt="贪玩蛇战方块"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
 </div>
 
-
-<div class="article">
- <div class="article-name">
-   <p>《切胖次》 </p>
  </div>
-  <div class="article-image"><a href="https://itunes.apple.com/cn/app/id1374746799" target="_blank" alt="切胖次"><img lazy-src="games/catpants-ad.png" data-original="/var3dfiles/loading.gif"/></a></div>    
-<div class="article-badge"><a href="https://itunes.apple.com/cn/app/id1374746799" target="_blank" alt="切胖次"><img lazy-src="/var3dfiles/iosdown.png" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
-</div>
-   
- 
         
 <!-- app结束 -->
         <div class="article-text"><span class="copyright">Copyright @ 2010-2018 TapEgg Studio, Inc. All rights reserved.</span><br>
@@ -178,6 +170,21 @@ body {
 				document.getElementById("privacy").innerText="Privacy Policy";
 				document.getElementById("viewgame").innerText="Check out all of our amazing games for iPhone and iPad and search for TapEgg in the AppStore search field.";
 				}
+				 var ks=[{name:"贪玩蛇战方块",img:"/games/snakebrick-ad.png",iosid:1403252096},{name:"切胖次",img:"/games/catpants-ad.png",iosid:1374746799}];
+				 var tar=$(".target");
+                 var ite=$(".article");
+                 ite.remove();
+                 ite.hide();
+                 ite.removeClass("hide");
+                 for(var i=0;i<ks.length;i++){
+                     var cpy=ite.clone();
+                     cpy.find("[key]").each(function(){
+                         var that=$(this);
+                         that.text(ks[i][that.attr("key")]);
+                     })
+                     cpy.fadeIn();
+                     tar.append(cpy);
+        }
         </script>
         <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_3642451'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D3642451%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
     </body>
