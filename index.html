@@ -198,11 +198,20 @@ body {
 								  that.remove();
 								  that.hide();
 							 }else{
-							 if(isEnglish){
+							   var key0=that.attr("key");
+							   if(key0=="iosid"){	 
+							         if(isEnglish){
 								   that.attr("href","https://itunes.apple.com/us/app/id"+ext);
 								 }else{
-							       that.attr("href","https://itunes.apple.com/cn/app/id"+ext);
+							           that.attr("href","https://itunes.apple.com/cn/app/id"+ext);
 								 }
+							    }else if(key0=="google"){
+							         if(isEnglish){
+								   that.attr("href","https://play.google.com/store/apps/details?id="+ext);
+								 }else{
+							           that.attr("href","https://play.google.com/store/apps/details?id="+ext);
+								 }
+							    }
 							 }
 					     }else if(that[0].tagName=="IMG"){
 							   var key=that.attr("key");
