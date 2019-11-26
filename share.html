@@ -22,15 +22,19 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端	
 var id=getQueryString("id");	
 if(isiOS){//如果是 ios
-document.getElementById("messeg").innerText="ios 访问";
-	if(isChinese){
-		 window.location.href = "https://itunes.apple.com/cn/app/id"+ks[id]["iosid"];
+document.getElementById("messeg").innerText="ios";
+	        if(isChinese){
+		    window.location.href = "https://itunes.apple.com/cn/app/id"+ks[id]["iosid"];
 		}else{
-			 window.location.href = "https://itunes.apple.com/en/app/id"+ks[id]["iosid"];
-			}
+	            window.location.href = "https://itunes.apple.com/en/app/id"+ks[id]["iosid"];
+		}
 }else if(isAndroid){//如果是 android
-     document.getElementById("messeg").innerText="android 访问";
-     window.location.href = "https://play.google.com/store/apps/details?id="+ks[id]["google"];
+     document.getElementById("messeg").innerText="android";
+	        if(isChinese){
+		    window.location.href = "https://www.taptap.com/app/"+ks[id]["taptap"];
+		}else{
+	            window.location.href = "https://play.google.com/store/apps/details?id="+ks[id]["google"];
+		}
 }else{//如果是 pc 的话就显示两种按钮
 document.getElementById("messeg").innerText="pc 访问";
 }	
