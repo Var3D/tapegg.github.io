@@ -191,10 +191,10 @@ body {
 							 cpy=items[i];
 							 }	 
                      cpy.find("[key]").each(function(){
-                                                 var that=$(this);
+                                            var that=$(this);
 					    if(that[0].tagName=="A"){
 							 var ext=ks[i][that.attr("key")];
-							 if(ext==undefined){
+							 if(!ext){
 								  that[0].remove();
 								  that[0].hide();
 							 }else{
@@ -213,7 +213,7 @@ body {
 										   that.attr("src","/var3dfiles/iosdown.png");
 									}
 							   }else if(key=="googledown"){
-								   if(ext==undefined){
+								   if(!ext){
 									  that[0].remove();
 								          that[0].hide();  
 								   }else{
