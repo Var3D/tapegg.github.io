@@ -157,28 +157,28 @@ body {
 				    document.getElementById("music").innerText="Original Song";
 				    document.getElementById("language").innerText="中文";
 				    document.getElementById("privacy").innerText="Privacy Policy";
-					document.getElementById("privacy").setAttribute('href',"/privacy-policy.html");
+				    document.getElementById("privacy").setAttribute('href',"/privacy-policy.html");
 				    document.getElementById("viewgame").innerText="Check out all of our amazing games for iPhone and iPad and search for TapEgg in the AppStore search field.";
 				}else{
-					$(document).attr("title","TapEgg免费苹果手机游戏");
+				    $(document).attr("title","TapEgg免费苹果手机游戏");
 				    document.getElementById("name").innerText="点蛋科技";
 				    document.getElementById("music").innerText="原创歌曲";
 				    document.getElementById("language").innerText="English";
 				    document.getElementById("privacy").innerText="隐私策略";
-					document.getElementById("privacy").setAttribute('href',"/privacy-policy-zh.html");
+				    document.getElementById("privacy").setAttribute('href',"/privacy-policy-zh.html");
 				    document.getElementById("viewgame").innerText="查看我们所有的iPhone和iPad的惊人游戏，在AppStore的搜索字段中搜索TapEgg.";
 				}
 			}
 			
 			change();
 			
-				 var tar=$(".target");
+		 var tar=$(".target");
                  var ite=$(".article");
                  ite.remove();
                  ite.hide();
                  ite.removeClass("hide");
 				 
-				 var items=[];
+		var items=[];
 				 
 		
 		function change2(isCreate){
@@ -191,12 +191,12 @@ body {
 							 cpy=items[i];
 							 }	 
                      cpy.find("[key]").each(function(){
-                         var that=$(this);
-						 if(that[0].tagName=="A"){
+                                                 var that=$(this);
+					    if(that[0].tagName=="A"){
 							 var ext=ks[i][that.attr("key")];
 							 if(ext==idundefined){
-								 that[0].remove();
-								 that[0].hide();
+								 //that[0].remove();
+								 //that[0].hide();
 							 }else{
 							 if(isEnglish){
 								   that.attr("href","https://itunes.apple.com/us/app/id"+ext);
