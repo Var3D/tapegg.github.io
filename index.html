@@ -222,32 +222,32 @@ body {
 					     }else if(that[0].tagName=="IMG"){
 							   var key=that.attr("key");
 							   if(key=="down"){
-								   if(isEnglish){
-									    that.attr("src","/var3dfiles/iosdown_en.png");
+								           if(isEnglish){
+									      that.attr("src","/var3dfiles/iosdown_en.png");
 									   }else{
-										   that.attr("src","/var3dfiles/iosdown.png");
-									}
+									      that.attr("src","/var3dfiles/iosdown.png");
+									   }
 							   }else if(key=="googledown"){
 							               if(isEnglish){
-									that.attr("src","/var3dfiles/iosdown_en.png");
+									    that.attr("src","/var3dfiles/iosdown_en.png");
 									}else{
-									that.attr("src","/var3dfiles/iosdown.png");
+									    that.attr("src","/var3dfiles/iosdown.png");
 									}
 							   }else if(key=="taptapdown"){
 							               if(isEnglish){
-									that.attr("src","/var3dfiles/iosdown_en.png");
+									   that.attr("src","/var3dfiles/iosdown_en.png");
 									}else{
-									that.attr("src","/var3dfiles/iosdown.png");
+									   that.attr("src","/var3dfiles/iosdown.png");
 									}
 							   }else{
 							    that.attr("lazy-src",ks[i][key]);
 						           }
 							 }else{
                                                            that.text(ks[i][that.attr("key")]);
-							   if(isEnglish){
+							        if(isEnglish){
 								   that.text(ks[i][that.attr("key")+"_en"]);
 								 }else{
-							       that.text(ks[i][that.attr("key")]);
+							           that.text(ks[i][that.attr("key")]);
 								 }
 							 }
                      })
