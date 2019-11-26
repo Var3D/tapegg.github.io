@@ -137,6 +137,9 @@ body {
 	
 <a key="google" href="" target="_blank">
 <img key="googledown" src="" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
+	
+<a key="taptap" href="" target="_blank">
+<img key="taptapdown" src="" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>	
 </div>
 
  </div>
@@ -206,11 +209,9 @@ body {
 							           that.attr("href","https://itunes.apple.com/cn/app/id"+ext);
 								 }
 							    }else if(key0=="google"){
-							         if(isEnglish){
-								   that.attr("href","https://play.google.com/store/apps/details?id="+ext);
-								 }else{
-							           that.attr("href","https://play.google.com/store/apps/details?id="+ext);
-								 }
+							         that.attr("href","https://play.google.com/store/apps/details?id="+ext);
+							    }else if(key0=="taptap"){
+							         that.attr("href","https://www.taptap.com/app/"+ext);
 							    }
 							 }
 					     }else if(that[0].tagName=="IMG"){
@@ -227,11 +228,17 @@ body {
 									}else{
 									that.attr("src","/var3dfiles/iosdown.png");
 									}
+							   }else if(key=="taptapdown"){
+							               if(isEnglish){
+									that.attr("src","/var3dfiles/iosdown_en.png");
+									}else{
+									that.attr("src","/var3dfiles/iosdown.png");
+									}
 							   }else{
 							    that.attr("lazy-src",ks[i][key]);
 						           }
 							 }else{
-                               that.text(ks[i][that.attr("key")]);
+                                                           that.text(ks[i][that.attr("key")]);
 							   if(isEnglish){
 								   that.text(ks[i][that.attr("key")+"_en"]);
 								 }else{
