@@ -1,5 +1,5 @@
 var ks=[
-  {name:"小小坦克大作战",name_en:"Battlefield Tank",img:"/games/tankbattlefield-ad.jpg",iosid:1452175303,google:"com.tapegg.rustbattle.android",taptap:"170850"},
+  {name:"小小坦克大作战",name_en:"Battlefield Tank",img:"/games/tankbattlefield-ad.jpg",iosid:1452175303,taptap:"170850"},
   {name:"舔狗大作战",name_en:"Follower Town",img:"/games/town-ad.jpg",iosid:1458557639},
   {name:"贪玩蛇战方块",name_en:"Snake Brick",img:"/games/snakebrick-ad.jpg",iosid:1403252096},
   {name:"疯狂切内裤",name_en:"Cut Pants",img:"/games/catpants-ad.jpg",iosid:1374746799},
