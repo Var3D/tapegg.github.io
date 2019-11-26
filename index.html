@@ -193,11 +193,17 @@ body {
                      cpy.find("[key]").each(function(){
                          var that=$(this);
 						 if(that[0].tagName=="A"){
+							 var ext=ks[i][that.attr("key")];
+							 if(ext==""){
+								 that.remove();
+								 that.hide();
+							 }else{
 							 if(isEnglish){
-								   that.attr("href","https://itunes.apple.com/us/app/id"+ks[i][that.attr("key")]);
+								   that.attr("href","https://itunes.apple.com/us/app/id"+ext);
 								 }else{
-							       that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
+							       that.attr("href","https://itunes.apple.com/cn/app/id"+ext);
 								 }
+							 }
 					     }else if(that[0].tagName=="IMG"){
 							   var key=that.attr("key");
 							   if(key=="down"){
