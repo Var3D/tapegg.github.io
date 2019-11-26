@@ -194,7 +194,7 @@ body {
                          var that=$(this);
 						 if(that[0].tagName=="A"){
 							 var ext=ks[i][that.attr("key")];
-							 if(ext==""){
+							 if(ext==idundefined){
 								 that.remove();
 								 that.hide();
 							 }else{
