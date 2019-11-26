@@ -6,7 +6,7 @@
 </head>
 <body>
 <font id="messeg" size="6" color="#ffffff" style="position:absolute;width:50%;left:50%;margin-left:-25%;top:30%;text-shadow:2px 2px 5px #333333;">消息</font>
-	
+<script type="text/javascript" src="data.js"></script>	
 <script>
 //获取浏url里的参数
 function getQueryString(name) { 
@@ -19,17 +19,18 @@ var language = (navigator.browserLanguage || navigator.language).toLowerCase();
 var isChinese=language.indexOf('zh')>-1;
 var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端		
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端	
+var id=getQueryString("id");	
 if(isiOS){//如果是 ios
 document.getElementById("messeg").innerText="ios 访问";
 	if(isChinese){
-		 window.location.href = "https://itunes.apple.com/cn/app/id"+getQueryString("ios");
+		 window.location.href = "https://itunes.apple.com/cn/app/id"+ks[id]["iosid"];
 		}else{
-			 window.location.href = "https://itunes.apple.com/en/app/id"+getQueryString("ios");
+			 window.location.href = "https://itunes.apple.com/en/app/id"+ks[id]["iosid"];
 			}
 }else if(isAndroid){//如果是 android
      document.getElementById("messeg").innerText="android 访问";
-	 window.location.href = "https://play.google.com/store/apps/details?id="+getQueryString("apk");
+     window.location.href = "https://play.google.com/store/apps/details?id="+ks[id]["google"];
 }else{//如果是 pc 的话就显示两种按钮
 document.getElementById("messeg").innerText="pc 访问";
 }	
