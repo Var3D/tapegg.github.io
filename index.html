@@ -134,6 +134,9 @@ body {
   data-original="/var3dfiles/loading.gif"/></a></div>    
 <div class="article-badge"><a key="iosid" href="" target="_blank">
 <img key="down" src="" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
+	
+<div class="article-badge"><a key="google" href="" target="_blank">
+<img key="googledown" src="" data-original="/var3dfiles/loading.gif" width="140" height="50" /></a></div>
 </div>
 
  </div>
@@ -202,10 +205,16 @@ body {
 									    that.attr("src","/var3dfiles/iosdown_en.png");
 									   }else{
 										   that.attr("src","/var3dfiles/iosdown.png");
-										   }
+									}
+							   }else if(key=="googledown"){
+							               if(isEnglish){
+									that.attr("src","/var3dfiles/iosdown_en.png");
+									}else{
+									that.attr("src","/var3dfiles/iosdown.png");
+									}
 							   }else{
-								   that.attr("lazy-src",ks[i][key]);
-								   }
+							    that.attr("lazy-src",ks[i][key]);
+						           }
 							 }else{
                                that.text(ks[i][that.attr("key")]);
 							   if(isEnglish){
