@@ -43,9 +43,11 @@ var ext_ios=ks[id]["iosid"];
 var ext_tap=ks[id]["taptap"];
 var ext_google=ks[id]["google"];
 if(isChinese){
-	document.getElementById("messeg").innerText="免费下载"+ks[id]["name"];
+	document.getElementById("messeg").innerText="免费下载游戏"+ks[id]["name"];
+	document.getElementsByTagName("title")[0].innerText = "免费下载游戏"+ks[id]["name"];
 }else{
-	document.getElementById("messeg").innerText="Go for free download "+ks[id]["name_en"];
+	document.getElementById("messeg").innerText="Free download game "+ks[id]["name_en"];
+	document.getElementsByTagName("title")[0].innerText = "Free download game "+ks[id]["name_en"];;
 }
 if(isiOS){//如果是 ios
       if(ext_ios){
