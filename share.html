@@ -16,52 +16,11 @@
 }
 </style>
 	
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/owl.carousel.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/owl.theme.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/nivo-lightbox/nivo-lightbox-theme.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/animate.css">
-<link rel="stylesheet" href="https://www.17sucai.com/preview/952947/2017-12-09/2547/css/style.css">	
-	
 </head>
 <body>	
-<div class="background">	
+<div class="background">		
 	
-<div class="container">
-		<div class="starting">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="img/LUCY2.png" alt="LUCY" class="wow flipInY animated animated animated" style="visibility: visible; animation-name: flipInY;">
-				</div>
-				<div class="col-md-6">
-					<div class="banner-text">
-						 <h2 class="animation-box wow bounceIn animated animated" style="visibility: visible; animation-name: bounceIn;"><strong class="strong">One touch for</strong><br>
-						all needs</h2>
-						<p>
-							 Lucy has been downloaded and loved by over 10M+ people from 130 countries all over the world in last 3 months. Download this free app on your Android and iOS device. Reviews and ratings are much appreciated.
-						</p>
-						<a href="#" class="btn btn-download wow animated fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
-						<i class="fa fa-android pull-left"></i>
-						<strong>Get it on</strong>
-						<br>Google Play </a>
-						<a href="#" class="btn btn-download wow animated fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-						<i class="fa fa-apple pull-left"></i>
-						<strong>Get it on</strong>
-						<br>App store </a>   
-					</div> <!-- /.banner-text -->
-				</div>
-			</div>
-		</div>
-		<!-- /.starting -->
-	</div>
-	
-	
-	
-<font id="messeg" size="6" color="#ffffff" style="position:absolute;width:50%;left:50%;margin-left:-25%;top:30%;text-shadow:2px 2px 5px #333333;">消息</font>
-
-	
+<font id="messeg" size="6" color="#ffffff">messeg</font>	
 	
 </div>
 
@@ -80,22 +39,44 @@ var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端	
 var id=getQueryString("id");	
+var ext_ios=ks[id]["iosid"];
+var ext_tap=ks[id]["taptap"];
+var ext_google=ks[id]["google"];
+if(isChinese){
+	document.getElementById("messeg").innerText="免费下载"+ks[id]["name"];
+}else{
+	document.getElementById("messeg").innerText="Go for free download "+ks[id]["name_en"];
+}
 if(isiOS){//如果是 ios
-document.getElementById("messeg").innerText="ios";
+      if(ext_ios){
 	        if(isChinese){
-		    window.location.href = "https://itunes.apple.com/cn/app/id"+ks[id]["iosid"];
+		    window.location.href = "https://itunes.apple.com/cn/app/id"+ext_ios;
 		}else{
-	            window.location.href = "https://itunes.apple.com/en/app/id"+ks[id]["iosid"];
+	            window.location.href = "https://itunes.apple.com/en/app/id"+ext_ios;
 		}
+      }else if(ext_tap){
+	        window.location.href = "https://www.taptap.com/app/"+ext_tap; 
+      }else{
+                window.location.href = "https://www.tapegg.com";
+      }
 }else if(isAndroid){//如果是 android
-     document.getElementById("messeg").innerText="android";
 	        if(isChinese){
-		    window.location.href = "https://www.taptap.com/app/"+ks[id]["taptap"];
+		    if(ext_tap){	
+		        window.location.href = "https://www.taptap.com/app/"+ext_tap;
+		    }else{
+		        window.location.href = "https://www.tapegg.com";
+		    }
 		}else{
-	            window.location.href = "https://play.google.com/store/apps/details?id="+ks[id]["google"];
+		    if(ext_google){	
+			    window.location.href = "https://play.google.com/store/apps/details?id="+ext_google;
+		    }else if(ext_tap){
+		            window.location.href = "https://www.taptap.com/app/"+ext_tap;
+		    }else{
+		            window.location.href = "https://www.tapegg.com";
+		    }
 		}
-}else{//如果是 pc 的话就显示两种按钮
-document.getElementById("messeg").innerText="pc 访问";
+}else{//如果是 pc
+             window.location.href = "https://www.tapegg.com";
 }	
 
 </script>
