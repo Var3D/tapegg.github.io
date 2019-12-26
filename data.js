@@ -1,10 +1,10 @@
 var ks=[
   {name:"小小坦克大作战",name_en:"Battlefield Tank",img:"/games/tankbattlefield-ad.jpg",iosid:1452175303,google:"com.tapegg.rustbattle",taptap:"170850"},
+  {name:"靓仔大作战",name_en:"Hero Fighting",img:"games/hero-ad-en.jpg",iosid:1344510227,taptap:"181476"},
   {name:"舔狗大作战",name_en:"Follower Town",img:"/games/town-ad.jpg",iosid:1458557639},
   {name:"贪玩蛇战方块",name_en:"Snake Brick",img:"/games/snakebrick-ad.jpg",iosid:1403252096},
   {name:"疯狂切内裤",name_en:"Cut Pants",img:"/games/catpants-ad.jpg",iosid:1374746799},
   {name:"我们的世界",name_en:"Our Craft",img:"/games/ourcraft-ad.jpg",iosid:1144041654},
-  {name:"英雄大作战",name_en:"Hero Fighting",img:"games/hero-ad-en.jpg",iosid:1344510227},
   {name:"蛇精病大作战",name_en:"King Greedy Snake",img:"/games/snake3d-ad.jpg",iosid:1249822516},
   {name:"战车大逃杀",name_en:"Hot Chariot",img:"/games/ad-hotchariot.jpg",iosid:1280455730},
   {name:"像素高速",name_en:"Pixel Highway",img:"/games/colorcar-ad.jpg",iosid:1107836993},
