@@ -5,7 +5,7 @@ var ks=[
   {name:"贪玩蛇战方块",name_en:"Snake Brick",img:"/games/snakebrick-ad.jpg",iosid:1403252096},
   {name:"疯狂切内裤",name_en:"Cut Pants",img:"/games/catpants-ad.jpg",iosid:1374746799},
   {name:"我们的世界",name_en:"Our Craft",img:"/games/ourcraft-ad.jpg",iosid:1144041654},
-  {name:"蛇精病大作战",name_en:"King Greedy Snake",img:"/games/snake3d-ad.jpg",iosid:1249822516},
+  {name:"蛇精病大作战",name_en:"King Greedy Snake",img:"/games/snake3d-ad.jpg",iosid:1249822516,google:"com.tapegg.snake"},
   {name:"战车大逃杀",name_en:"Hot Chariot",img:"/games/ad-hotchariot.jpg",iosid:1280455730},
   {name:"像素高速",name_en:"Pixel Highway",img:"/games/colorcar-ad.jpg",iosid:1107836993},
   {name:"天天泡泡龙",name_en:"Bubble Line",img:"/games/bubble-ad.jpg",iosid:1227560990},
