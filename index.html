@@ -156,6 +156,11 @@ body {
 
 <script type="text/javascript" src="data.js"></script>
 <script>
+	ks=ks.sort(function(a, b){
+	  return a.nid-b.nid;
+        });
+	
+	
 			var language = (navigator.language || navigator.browserLanguage).toLowerCase();
 			var isEnglish=language.indexOf('zh')<0;
 			
