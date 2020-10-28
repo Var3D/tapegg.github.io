@@ -33,18 +33,16 @@ function getQueryString(name) {
   if (r != null) return unescape(r[2]); return null; 
 } 
 //是否为中文
+ks=ks.sort(function(a, b){
+	  return a.nid-b.nid;
+});	
 var language = (navigator.browserLanguage || navigator.language).toLowerCase();
 var isChinese=language.indexOf('zh')>-1;
 var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端	
 var id=getQueryString("id");
-	
-ks=ks.sort(function(a, b){
-	  return a.nid-b.nid;
-});
 
-	
 var ext_ios=ks[id]["iosid"];
 var ext_tap=ks[id]["taptap"];
 var ext_google=ks[id]["google"];
