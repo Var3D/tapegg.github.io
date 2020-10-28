@@ -38,7 +38,17 @@ var isChinese=language.indexOf('zh')>-1;
 var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端	
-var id=getQueryString("id");	
+var id=getQueryString("id");
+	
+ks.sort(function(a, b){
+	  var x = a["nid"];
+	  var y = b["nid"];
+	  if (x < y) {return -1;}
+	  if (x > y) {return 1;}
+	  return 0;
+});
+
+	
 var ext_ios=ks[id]["iosid"];
 var ext_tap=ks[id]["taptap"];
 var ext_google=ks[id]["google"];
