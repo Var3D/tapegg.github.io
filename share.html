@@ -32,10 +32,7 @@ function getQueryString(name) {
   var r = window.location.search.substr(1).match(reg); 
   if (r != null) return unescape(r[2]); return null; 
 } 
-//是否为中文
-ks=ks.sort(function(a, b){
-	  return a.nid-b.nid;
-});	
+//是否为中文	
 var language = (navigator.browserLanguage || navigator.language).toLowerCase();
 var isChinese=language.indexOf('zh')>-1;
 var u = navigator.userAgent;
