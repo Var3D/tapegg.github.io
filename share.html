@@ -26,6 +26,9 @@
 
 <script type="text/javascript" src="data.js"></script>	
 <script>
+	ks=ks.sort(function(a, b){
+	  return a.nid-b.nid;
+        });
 //获取浏url里的参数
 function getQueryString(name) { 
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
