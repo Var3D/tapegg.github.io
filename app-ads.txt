@@ -1,8 +1,8 @@
 google.com, pub-3831940733333692, DIRECT, f08c47fec0942fa0
 
-google.com, pub-1194868419069008, DIRECT, f08c47fec0942fa0
-
 google.com, pub-9939663333307366, DIRECT, f08c47fec0942fa0
+
+google.com, pub-1194868419069008, DIRECT, f08c47fec0942fa0
 
 unity.com, 1237213, DIRECT, 96cabb5fbdde37a7
 
