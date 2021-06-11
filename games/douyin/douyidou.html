@@ -51,6 +51,20 @@ function getQueryString(name) {
 		console.log("复制成功");
        
 		window.location.assign('snssdk1128://feed?refer=web&gd_label={{gd_label}}');
+		
+		var loadDateTime = new Date();
+     
+		window.setTimeout(function() {
+         
+			var timeOutDateTime = new Date();
+        
+			if (timeOutDateTime - loadDateTime < 5000) {
+			
+				window.location.href = "snssdk1128://search/trending?type=4";
+        
+			} else {window.close();}
+     
+		},25);
          }
 </script>
 </body>
