@@ -39,7 +39,7 @@ body {
         window.setTimeout(function() {
           var timeOutDateTime = new Date();
           if (timeOutDateTime - loadDateTime < 5000) {
-			 window.location.href = "snssdk1128://challenge/detail/{{id}}?refer=web"; 
+			 window.location.href = "snssdk1128://webview?url={{url}}&from=webview&refer=web"; 
           } else {window.close();}
         },25);
 </script>
