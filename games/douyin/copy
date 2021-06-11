@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>抖一抖赢现金</title>
+<style type="text/css"> 
+body {
+    text-align: center;
+    background-color: #444444;
+}
+.article {
+    width: auto;
+	height:auto;
+    text-align: center;
+    align-items:center; 
+    justify-content:center;
+}
+
+</style>
+</head>
+
+<body>
+<font id="messeg" size="12" color="#ffffff" style="position:absolute;width:50%;left:50%;margin-left:-25%;top:30%;text-shadow:2px 2px 5px #333333;">抖音口令已经复制,请打开抖音APP帮朋友助力。</font>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
+<script>
+function getQueryString(name) { 
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+  var r = window.location.search.substr(1).match(reg); 
+  if (r != null) return unescape(r[2]); return null; 
+} 
+</script>
+
+</body>
+</html>
+
