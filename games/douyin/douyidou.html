@@ -50,21 +50,7 @@ function getQueryString(name) {
    
 		console.log("复制成功");
        
-		var loadDateTime = new Date();
-       
-		window.setTimeout(function() {
-         
-			var timeOutDateTime = new Date();
-          
-			if (timeOutDateTime - loadDateTime < 5000) {
-			  
-				//window.location.href = "https://itunes.apple.com/cn/app/id"+getQueryString("id");
-         
-				window.location.assign('https://z.douyin.com/rCN');
-			} else {window.close();}
-       
-		},25);
-		//window.location.assign('https://z.douyin.com/rCN');
+		window.location.assign('snssdk1128://feed?refer=web&gd_label={{gd_label}}');
          }
 </script>
 </body>
