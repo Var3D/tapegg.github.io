@@ -1,1 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tapegg Game</title>
+<style type="text/css"> 
+body {
+    text-align: center;
+    background-color: #444444;
+}
+.article {
+    width: auto;
+	height:auto;
+    text-align: center;
+    align-items:center; 
+    justify-content:center;
+}
+
+</style>
+</head>
+
+<body>
+<img id="bg" src="https://www.tapegg.com/games/douyin/douyidou.jpg" style="width:100%;height:auto;position:absolute;;left:0px;top:0px;"/>
+
+<div id="erweima"></div>
+<font id="erweimafont" size="3" color="#000000" style="position:absolute;left:25px;top:160px">请用手机扫一扫访问!</font>
+<font id="messeg" size="6" color="#ffffff" style="position:absolute;width:50%;left:50%;margin-left:-25%;top:30%;text-shadow:2px 2px 5px #333333;">你的朋友建设了一个独立无二的世界，邀请你去他的世界逛逛。</font>
+<button class="btn" id="btn" data-clipboard-text="copyValue" onclick="change()" 
+style="background:url(https://bmob-cdn-444.b0.upaiyun.com/2018/08/09/63c0ad1e40e7d9a6800447e49e29ca95.jpg) no-repeat;border:none;background-size: 100% 100%;width:400px;height:80px;font-size:30px;color:white;position:absolute;left:50%;margin-left:-200px;top:70%;margin-top:-40px;">进入世界</button>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
+<script>
+function getQueryString(name) { 
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+  var r = window.location.search.substr(1).match(reg); 
+  if (r != null) return unescape(r[2]); return null; 
+} 
+
+function ios(){
+        var loadDateTime = new Date();
+        window.setTimeout(function() {
+          var timeOutDateTime = new Date();
+          if (timeOutDateTime - loadDateTime < 5000) {
+			  window.location.href = "https://itunes.apple.com/cn/app/id"+getQueryString("id");
+          } else {window.close();}
+        },25);
+       window.location.href = "app://tapegg.craft"+location.search;
+};
+
+function change(){
+	var id='Ej3Mk4Ohpa94fX4Z'+getQueryString('m');
+    document.getElementById("btn").setAttribute('data-clipboard-text',id);
+	ios();
+}
+var browser = {
+            versions: function() {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {     //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            } (),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+</script>
+
+<script>
+var copyBtn = new ClipboardJS('.btn');
+var bgimg=document.getElementById("bg");
+var path=location.search;
+path=path.replace(/&/g, "%26");
+if (browser.versions.mobile==false) {
+		var cc=new Image();
+        cc.src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://www.tapegg.com/games/craft/share.html"+path;
+        cc.setAttribute("style","width:120px;height:120px;position:absolute;left:40px;top:30px;");
+        document.getElementById("erweima").appendChild(cc);
+}else{
+	document.getElementById("erweimafont").style.visibility="hidden";
+	document.getElementById("messeg").style.color="black";
+	}
+</script>
+</body>
+</html>
 
