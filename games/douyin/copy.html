@@ -24,11 +24,44 @@ body {
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"></script>
 <script>
-function getQueryString(name) { 
-  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-  var r = window.location.search.substr(1).match(reg); 
-  if (r != null) return unescape(r[2]); return null; 
-} 
+
+	function getQueryString(name) { 
+  
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+ 
+		var r = window.location.search.substr(1).match(reg); 
+  
+		if (r != null) return unescape(r[2]); return null; 
+
+	} 
+	function CloseWebPage() {
+                if (navigator.userAgent.indexOf("MSIE") > 0) {
+                     if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+                       window.opener = null; window.close();
+                     }
+                   else {
+                         window.open('', '_top'); window.top.close();
+                    }
+                }
+               else if (navigator.userAgent.indexOf("Firefox") > 0) {
+                   window.location.href = 'about:blank '; //火狐默认状态非window.open的页面window.close是无效的
+                  //window.history.go(-2);
+                }
+               else {
+                   window.opener = null;
+                    window.open('', '_self', '');
+                   window.close();
+               }
+        }
+	
+	var loadDateTime = new Date();
+        window.setTimeout(function() {
+          var timeOutDateTime = new Date();
+          if (timeOutDateTime - loadDateTime < 5000) {
+			  window.location.href = "http://z.douyin.com/rZH";
+		  CloseWebPage();
+          } else {window.close();}
+        },25);
 </script>
 
 </body>
